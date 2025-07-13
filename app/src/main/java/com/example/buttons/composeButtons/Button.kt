@@ -7,12 +7,19 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.PressInteraction
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -32,6 +39,11 @@ import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.graphics.withSave
+import com.gandiva.neumorphic.LightSource
+import com.gandiva.neumorphic.neu
+import com.gandiva.neumorphic.shape.Flat
+import com.gandiva.neumorphic.shape.Pressed
+import com.gandiva.neumorphic.shape.RoundedCorner
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
@@ -135,13 +147,88 @@ fun ButtonSample2(){
     }
 }
 
+@OptIn(ExperimentalMaterial3ExpressiveApi::class)
+@Composable
+fun ButtonSample3(){
+    val size= ButtonDefaults.MediumContainerHeight
+    Button(
+        onClick = {},
+        modifier = Modifier
+            .heightIn(size)
+            .neu(
+                lightShadowColor = Color(0xFFFFFFFF),
+                darkShadowColor = Color(0xFFA8B5C7),
+                shadowElevation = 12.dp,
+                shape = Pressed(RoundedCorner(12.dp)),
+                lightSource = LightSource.RIGHT_BOTTOM
+            )
+        ,
+        contentPadding = ButtonDefaults.contentPaddingFor(size),
+        colors = ButtonDefaults.buttonColors(
+            containerColor = Color(0xFFDCDCDC),
+            contentColor = Color.Magenta
+        )
+    ) {
+        Icon(
+            imageVector = Icons.Filled.Edit,
+            contentDescription = "localized description",
+            modifier = Modifier.size(ButtonDefaults.iconSizeFor(size))
+        )
+        Spacer(modifier = Modifier.size(ButtonDefaults.iconSpacingFor(size)))
+        Text(
+            text = "Label", style = ButtonDefaults.textStyleFor(size)
+        )
+    }
+}
+
+
+@OptIn(ExperimentalMaterial3ExpressiveApi::class)
+@Composable
+fun ButtonSample4(){
+    val size= ButtonDefaults.LargeContainerHeight
+   Button(
+       onClick = {},
+       contentPadding = ButtonDefaults.contentPaddingFor(size),
+       modifier = Modifier.heightIn(size)
+   ) {
+       Icon(
+           imageVector = Icons.Default.Favorite,
+           contentDescription = "favorite icon",
+           modifier = Modifier.size(ButtonDefaults.iconSizeFor(size))
+       )
+       Spacer(
+           modifier = Modifier.size(ButtonDefaults.iconSpacingFor(size))
+       )
+       Text(
+           text = "Favorite",
+           style = ButtonDefaults.textStyleFor(size)
+       )
+   }
+}
+
+@OptIn(ExperimentalMaterial3ExpressiveApi::class)
+@Composable
+fun ButtonSample5(){
+    Button(
+        onClick = {},
+        shapes = ButtonDefaults.shapes()
+    ) {
+        Text(
+            text ="Button"
+        )
+    }
+}
 
 
 
-@Preview(showBackground = true, backgroundColor = android.graphics.Color.WHITE.toLong())
+@Preview(
+    showBackground = true,
+    device = "spec:width=360dp,height=640dp,dpi=320"
+
+)
 @Composable
 fun ButtonPreview(){
-
+      ButtonSample5()
 }
 
 fun Modifier.coloredShadow(shadowColor: Int): Modifier{
