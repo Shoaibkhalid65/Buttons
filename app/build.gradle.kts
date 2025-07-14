@@ -60,8 +60,10 @@ dependencies {
     implementation(libs.material3)
 //    icons dependency
     implementation(libs.androidx.material.icons.extended)
-//    library for neumorphism
+//    library for neumorphism by sridhar
     implementation(libs.neumorphic)
+// lottie animation
+    implementation(libs.lottie.compose)
 
 
 }

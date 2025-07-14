@@ -1,6 +1,7 @@
 [versions]
 agp = "8.11.1"
 composeColorfulShadow = "1.0.0"
+composeneumorphism = "1.0.0-alpha02"
 kotlin = "2.2.0"
 coreKtx = "1.16.0"
 junit = "4.13.2"
@@ -9,6 +10,7 @@ espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.9.1"
 activityCompose = "1.10.1"
 composeBom = "2025.06.01"
+lottieCompose = "6.6.7"
 material3 = "1.4.0-alpha17"
 materialIconsExtended = "1.7.8"
 neumorphic = "0.0.6"
@@ -18,6 +20,7 @@ synth = "1.0.0"
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "materialIconsExtended" }
 compose-colorful-shadow = { module = "com.github.skydoves:compose-colorful-shadow", version.ref = "composeColorfulShadow" }
+composeneumorphism = { module = "me.nikhilchaudhari:composeNeumorphism", version.ref = "composeneumorphism" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -31,6 +34,7 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottieCompose" }
 material3 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
 neumorphic = { module = "io.github.sridhar-sp:neumorphic", version.ref = "neumorphic" }
 synth = { module = "club.cred.android:synth", version.ref = "synth" }
