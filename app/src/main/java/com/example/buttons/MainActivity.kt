@@ -6,13 +6,14 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.example.buttons.buttonGroups.Sample1
 import com.example.buttons.weather.WeatherScreen1
+import com.example.buttons.weather.WeatherScreen2
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContent {
-            WeatherScreen1()
+            WeatherScreen2()
         }
     }
 }
