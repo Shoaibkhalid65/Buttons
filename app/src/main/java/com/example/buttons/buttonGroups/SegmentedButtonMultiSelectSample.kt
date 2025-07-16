@@ -14,7 +14,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import com.gandiva.neumorphic.LightSource
+import com.gandiva.neumorphic.neu
+import com.gandiva.neumorphic.shape.Pressed
+import com.gandiva.neumorphic.shape.RoundedCorner
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
@@ -23,6 +29,14 @@ fun SegmentedButtonMultiSelectSample(){
     MultiChoiceSegmentedButtonRow {
         Item2.entries.forEachIndexed { index, item2 ->
             SegmentedButton(
+                modifier = Modifier
+                    .neu(
+                        lightShadowColor = Color(0xFFFFFFFF),
+                        darkShadowColor = Color(0xFFA8B5C7),
+                        shadowElevation = 12.dp,
+                        shape = Pressed(RoundedCorner(12.dp)),
+                        lightSource = LightSource.LEFT_BOTTOM
+                    ),
                 checked = checkList[index],
                 onCheckedChange = {
                     checkList[index]=it

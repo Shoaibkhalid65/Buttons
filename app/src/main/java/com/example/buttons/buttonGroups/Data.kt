@@ -52,7 +52,8 @@ enum class Item1(
 }
 enum class Item2(
     val label:String,
-    val icon: ImageVector
+    val icon: ImageVector,
+    val weight:Float=1f
 ){
     FAVORITES(
         label = "Favorites",
@@ -60,7 +61,8 @@ enum class Item2(
     ),
     TRENDING(
         label = "Trending",
-        icon = Icons.AutoMirrored.Filled.TrendingUp
+        icon = Icons.AutoMirrored.Filled.TrendingUp,
+        weight = 2f
     ),
     SAVED(
         label = "Saved",
