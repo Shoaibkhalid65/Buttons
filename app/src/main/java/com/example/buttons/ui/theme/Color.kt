@@ -14,3 +14,5 @@ val ButtonBackgroundColor=Color(0xFFe8e8e8)
 val ButtonTextColor= Color(0xFF867c7c)
 val ButtonIconColor= Color(0xFFff6e6e)
 val ButtonLightShadowColor=Color(0xFFffe2e2)
+
+val LightGreenColor=Color(0xFFb3f23d)
