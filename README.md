@@ -39,14 +39,9 @@ These components are ideal for selections, filters, and action groups in modern 
 ---
 
 ### 🎥 Demo Screenshots
-![Single Select Button Group]
 <img src="screenshots/single_select_button_group.png" alt="Single Select Button Group" width="300" height="100"/>
-![Single Choice Segmented Button]
+
 <img src="screenshots/single_choic_segmented_button.png" alt="Single Select Button Group" width="300" height="100"/>
-
-
-| ![Single Select Button Group](screenshots/single_select_button_group.png) 
-| ![Single Choice Segmented Button](screenshots/single_choic_segmented_button.png) 
 
 ---
 
