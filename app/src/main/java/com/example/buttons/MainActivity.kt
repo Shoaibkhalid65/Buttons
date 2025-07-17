@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import com.example.buttons.buttonGroups.CustomMultiSelectButtonGroup
+import com.example.buttons.buttonGroups.CustomSegmentedButton
 import com.example.buttons.buttonGroups.Sample1
 import com.example.buttons.splitButtons.CustomSplitButton
 import com.example.buttons.splitButtons.SplitButtonWithDropdownMenuSample
@@ -16,7 +18,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            CustomSplitButton()
+            CustomSegmentedButton()
         }
     }
 }
